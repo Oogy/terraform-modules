@@ -18,7 +18,7 @@ variable "application" {
   default = "Docker on Ubuntu 18.04 x64"
 }
 
-variable "module_ssh_keys" {
+variable "ssh_key" {
   type    = list(string)
   default = ["empty"]
 }
