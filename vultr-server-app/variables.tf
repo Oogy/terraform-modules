@@ -19,8 +19,8 @@ variable "application" {
 }
 
 variable "ssh_key" {
-  type    = list(string)
-  default = ["empty"]
+  type    = string
+  default = null
 }
 
 variable "project_name" {
