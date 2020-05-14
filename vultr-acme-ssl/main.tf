@@ -19,7 +19,6 @@ resource "acme_registration" "reg" {
 
 resource "tls_cert_request" "req" {
   key_algorithm   = var.key_type
-  rsa_bits        = var.rsa_bits
   private_key_pem = tls_private_key.domain_private_key.private_key_pem
   dns_names       = ["*.${var.project_domain}"]
 
