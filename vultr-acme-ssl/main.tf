@@ -29,7 +29,6 @@ resource "tls_cert_request" "req" {
 
 resource "acme_certificate" "certificate" {
   account_key_pem         = acme_registration.reg.account_key_pem
-  common_name             = var.project_domain
   certificate_request_pem = tls_cert_request.req.cert_request_pem
 
   dns_challenge {
